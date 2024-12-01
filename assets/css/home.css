@@ -1,0 +1,249 @@
+  header {
+      display: flex;
+      background-color: var(--bg-color);
+      align-items: center;
+      box-shadow: 0 1px 2px 2px gray;
+  }
+
+  header>.logo>img {
+      width: 65%;
+  }
+
+  header>.text>ul {
+      display: flex;
+      list-style-type: none;
+  }
+
+  header>.text>ul>li {
+      margin-right: 32px;
+  }
+
+  header>.text {
+      margin: auto;
+  }
+
+  header>.text>ul>li {
+      position: relative;
+  }
+
+  header>.text>ul>li>.sub-menu>li {
+      margin-bottom: 19px;
+      margin-left: 20px;
+  }
+
+  header>.text>ul>li>.sub-menu>li>a {
+      color: #F0F2F5;
+  }
+
+  header>.text>ul>li>a:nth-child(1):hover~.sub-menu {
+      opacity: 1;
+      height: 300px;
+      visibility: visible;
+  }
+
+  header>.text>ul>#too>.sub-menu2>li>a {
+      color: #fff;
+  }
+
+  header>.text>ul>li:nth-child(1)>i,
+  header>.text>ul>#too>i {
+      color: white;
+  }
+
+  header>.text>ul>#too>.sub-menu2:hover {
+      height: auto;
+      transition-delay: 3s;
+  }
+
+  header>.text>ul>li>.sub-menu:hover {
+      height: auto;
+      transition-delay: 5s;
+  }
+
+  header .text ul li .sub-menu {
+      background-color: var(--sub-c);
+      position: absolute;
+      top: 24px;
+      left: -14px;
+      opacity: 0;
+      height: 0px;
+      transition: all 0.9s;
+      width: 200px;
+      padding: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 5px 1px;
+      visibility: hidden;
+  }
+
+  header .text ul li:nth-child((2)) {
+      position: relative;
+  }
+
+  header>.text>ul>#too>a:hover~.sub-menu2 {
+      opacity: 1;
+      visibility: visible;
+      height: 90px;
+  }
+
+  header .text ul li .sub-menu2 {
+      position: absolute;
+      top: 25px;
+      visibility: hidden;
+      left: -13px;
+      background-color: var(--sub-c);
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 17px 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px 1px;
+      opacity: 0;
+      transition: all 0.9s;
+      height: 0;
+  }
+
+  header>.text>ul>li>.sub-menu2:nth-child(2)>li>a {
+      color: #F0F2F5;
+  }
+
+  header>.text>ul>li>a:hover {
+      color: #F5F7FA;
+      transition: all 0.4s;
+  }
+
+  header>.text>ul>li>a {
+      color: #C5C7CE;
+      font-size: 1.1rem;
+  }
+
+  header>.btn>button:hover {
+      background-color: #3357b3;
+      transition: 0.4s;
+  }
+
+  header>.btn>button {
+      background-color: var(--btn-color);
+      padding: 18px 25px;
+      border-radius: 9px;
+      border: none;
+      color: #F5F7FA;
+      font-weight: 700;
+      cursor: pointer;
+  }
+
+
+
+
+  header>.menu {
+      display: flex;
+      color: white;
+      font-size: 1.1rem;
+      gap: 15px;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+  }
+
+  header>.menu>i {
+      cursor: pointer;
+  }
+
+
+  .container2{
+    display: flex;
+    margin-top: 90px;
+    align-items: center;
+    padding: 25px 140px;
+  }
+  .container2 h1{
+    display: inline;
+    margin-right: auto;
+    color: #F5F7FA;
+    font-size: 70px;
+    width: 62%;
+  }
+  .container2 img{
+    width: 5%;
+    border-radius: 50%;
+    border: 5px solid #1d1d1d;
+    margin-left: -40px; 
+    position: relative;
+
+  }
+
+  .container2 #bor{
+    background-color: #3F6EE9;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    border: 5px solid #1d1d1d;
+    align-items: center;
+    justify-content: center;  
+    margin-left: -40px; 
+    position: relative;
+  }
+  .container2>span{
+    position: absolute;
+    right: 139px;
+    bottom: 350px;
+    width: 8%;
+    text-transform: uppercase;
+  }
+  .picture>div>img{
+    width: 100%;
+  }
+  @media screen and (max-width: 850px) {
+      header{
+         display: flex;
+         margin-top: 20px;
+      }
+
+      header>.text {
+          opacity: 0;
+          visibility: hidden;
+      }
+
+      header>.menu {
+          opacity: 1;
+          visibility: visible;
+          display: flex;
+          margin: auto;
+      }
+
+      header>.text>ul>li>i {
+          display: none;
+      }
+
+      header>.text>ul>li>a {
+          color: gray !important;
+          font-size: 1.2rem;
+
+      }
+      .text>ul>li:hover{
+        border: 3px solid black;
+      }
+      .text {
+          position: relative;
+      }
+
+      .text ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          position: absolute;
+          top: 60px;
+          left: -40px;
+          padding: 15px 20px;
+          box-shadow: 0 0 3px 1px black;
+      }
+
+      header>.menu:hover+.text {
+          visibility: visible;
+          opacity: 1;
+          display: flex;
+          flex-direction: column;
+
+      }
+  }
